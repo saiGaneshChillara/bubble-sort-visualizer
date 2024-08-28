@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="input-section">
+        <input type="text" id="user-array" placeholder="Enter array Ex: 1,2,3,4....">
+        <button onclick="setArray()">Set Array</button>
+        <button onclick="generateRandomArray()">Generate Random Array</button>
+    </div>
+    <div class="main-container">
+        <div class="visualization-container">
+            <div class="container" id="array-container"></div>
+        </div>
+        <div class="code-container">
+            <pre id="code">
+                <span id="line-1">function bubbleSort() {</span>
+                <span id="line-2">   for (let i = 0; i < array.length; i++) {</span>
+                <span id="line-3">       for (let j = 0; j < array.length - i - 1; j++) {</span>
+                <span id="line-4">           if (array[j] &gt; array[j + 1]) {</span>
+                <span id="line-5">               swap(array[j], array[j + 1])</span>
+                <span id="line-6">           }</span>
+                <span id="line-7">       }</span>
+                <span id="line-8">   }</span>
+                <span id="line-9">}</span>
+            </pre>
+        </div>
+    </div>
+    <div class="explanation-container">
+        <p id="explanation">Explanation of the current step will appear here.</p>
+    </div>
+    <button onclick="startSorting()">Start Sorting</button>
+    <script src="script.js"></script>
+</body>
+</html>
